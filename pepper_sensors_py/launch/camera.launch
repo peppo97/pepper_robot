@@ -18,6 +18,7 @@
     <param name="resolution" value="$(arg resolution)" />
     <param name="frame_rate" value="$(arg frame_rate)" />
     <param name="use_ros_time" value="True" />
+    <param name="camera_depth_frame" value="CameraDepth_optical_frame" />
   </node>
 
 </launch>
