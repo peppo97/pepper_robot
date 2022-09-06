@@ -7,8 +7,8 @@
   <arg name="ns" default="" /> <!-- front camera -->
   <arg name="source" default="0" /> <!-- front camera -->
   <arg name="color_space" default="13" />
-  <arg name="resolution" default="1" />
-  <arg name="frame_rate" default="15" />
+  <arg name="resolution" default="2" />
+  <arg name="frame_rate" default="20" />
 
   <node pkg="pepper_sensors_py" type="camera.py" name="camera" required="true" args="--pip=$(arg nao_ip) --pport=$(arg nao_port)" output="screen">
     <param name="calibration_file_bottom" type="string" value="file://$(find naoqi_sensors_py)/share/nao_camera_bottom_640x480.yaml"/>
