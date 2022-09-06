@@ -6,7 +6,7 @@
 
   <arg name="ns" default="" /> <!-- front camera -->
   <arg name="source" default="0" /> <!-- front camera -->
-  <arg name="color_space" default="13" />
+  <arg name="color_space" default="11" />
   <arg name="resolution" default="2" />
   <arg name="frame_rate" default="20" />
 
