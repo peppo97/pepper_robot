@@ -181,8 +181,13 @@ class NaoqiLaser(NaoqiNode):
         for i in xrange(scanNum,0,-1):
             keyX = keyPrefix+'Seg'+'%02d'%(i,)+'/X/Sensor/Value'
             keyY = keyPrefix+'Seg'+'%02d'%(i,)+'/Y/Sensor/Value'
-            x = self.memProxy.getData(keyX)
-            y = self.memProxy.getData(keyY)
+            try:
+                x = self.memProxy.getData(keyX)
+                y = self.memProxy.getData(keyY)
+            except RuntimeError:
+                self.connectNaoQi()
+                x = self.memProxy.getData(keyX)
+                y = self.memProxy.getData(keyY)
             scans.append(x)
             scans.append(y)
             scans.append(0.0)
